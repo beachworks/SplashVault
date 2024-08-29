@@ -44,41 +44,41 @@ Non global variables can be invented by the programmer as necessary.
 
 ## Program Commands
 
-name "string"             -- Gives the name of the program to be displayed in the UI.  If the name 
-                             has spaces, it must be inclosed with quotes.  The last name encountered
-                             will be used. If no name is given, then the name of the file will be used.
-set *var value            -- Sets a variable to a value.  The value can be a literal integer
-                             or another variable.
-inc *var [value]          -- Increments a variable.  The default increment is one.  An optional value
-                             can be used to set the increment value.
-dec *var [value]          -- decrement a variable.  The default decrement one. An optional value
-                             can be used to set the decrement value.
-all-off                   -- Turns all the water-spouts off.
-set-flow value            -- Sets the flow to a value.  Blocks until the flow is reached. (See notes below)
-change-flow value         -- Sets the flow to a value, but does not block while the flow is being changed.
-label label-name          -- Sets a flow control point in the program with the given label name.
-goto label-name           -- Changes the current exection line to the one with the given label.  If 
-                             label-name does not exist, flow continues to the next line without an error.
-if-zero *var label-name   -- Changes the current exection line to the one with the given label if the
-                             given varialbe is zero. If the varialbe does not exist, it is assumed to be zero.
-                             If the label-name does not exist, flow continues to the next line without an error.
-if-not-zero *var label-name -- Works like if-zero, except tests for non-zero.
-pause [value]             -- Pauses the number of millisecond given by the value.  The value can be a
-                             variable or an literal integer.  If the value is not provided, then the gobal 
-                             variable *period is used.
-spout-on spout-name       -- Turns a spout or a group of spouts on.  The spout-name can be a litterial 
-                             (see below) or a variable. 
-spout-off spout-name      -- Turns a spout or a group of spouts off.  The spout-name can be a litterial
-                             (see below) or a variable. 
-squirt spout-name [d]     -- Causes a spout or group of spouts to squirt for a duration given by d. The
-                             duration is optional, and if not given then the global *duration is used.
-                             The program will block for the duration.
-random *var [i0 i1]       -- Sets the given variable to a random number between (and including) i0 and i1.
-                             If i0 and i1 are not given, then the random number will be between 0 and 13.
-hold                      -- Causes the program to hold in place and not advance. Basically puts the program
-                             into an infinite loop.
-exit                      -- Causes the program to quit and exit. All spouts are turned off.  Note that the
-                             program will automatically exit if there are no more statements to execute.
+    name "string"             -- Gives the name of the program to be displayed in the UI.  If the name 
+                                has spaces, it must be inclosed with quotes.  The last name encountered
+                                will be used. If no name is given, then the name of the file will be used.
+    set *var value            -- Sets a variable to a value.  The value can be a literal integer
+                                or another variable.
+    inc *var [value]          -- Increments a variable.  The default increment is one.  An optional value
+                                can be used to set the increment value.
+    dec *var [value]          -- decrement a variable.  The default decrement one. An optional value
+                                can be used to set the decrement value.
+    all-off                   -- Turns all the water-spouts off.
+    set-flow value            -- Sets the flow to a value.  Blocks until the flow is reached. (See notes below)
+    change-flow value         -- Sets the flow to a value, but does not block while the flow is being changed.
+    label label-name          -- Sets a flow control point in the program with the given label name.
+    goto label-name           -- Changes the current exection line to the one with the given label.  If 
+                                label-name does not exist, flow continues to the next line without an error.
+    if-zero *var label-name   -- Changes the current exection line to the one with the given label if the
+                                given varialbe is zero. If the varialbe does not exist, it is assumed to be zero.
+                                If the label-name does not exist, flow continues to the next line without an error.
+    if-not-zero *var label-name -- Works like if-zero, except tests for non-zero.
+    pause [value]             -- Pauses the number of millisecond given by the value.  The value can be a
+                                variable or an literal integer.  If the value is not provided, then the gobal 
+                                variable *period is used.
+    spout-on spout-name       -- Turns a spout or a group of spouts on.  The spout-name can be a litterial 
+                                (see below) or a variable. 
+    spout-off spout-name      -- Turns a spout or a group of spouts off.  The spout-name can be a litterial
+                                (see below) or a variable. 
+    squirt spout-name [d]     -- Causes a spout or group of spouts to squirt for a duration given by d. The
+                                duration is optional, and if not given then the global *duration is used.
+                                The program will block for the duration.
+    random *var [i0 i1]       -- Sets the given variable to a random number between (and including) i0 and i1.
+                                If i0 and i1 are not given, then the random number will be between 0 and 13.
+    hold                      -- Causes the program to hold in place and not advance. Basically puts the program
+                                into an infinite loop.
+    exit                      -- Causes the program to quit and exit. All spouts are turned off.  Note that the
+                                program will automatically exit if there are no more statements to execute.
 
 ## Spout Names
 
