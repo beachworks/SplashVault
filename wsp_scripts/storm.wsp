@@ -1,0 +1,17 @@
+# storm.wsp -- Makes a huge storm
+#
+# User can control duration and period, after this program
+# sets them
+
+name "Storm"
+set-flow 100 
+pause 500
+set *duration 150
+set *period 250
+
+label top
+  random *i 0 13
+  squirt *i 
+  pause 
+  goto top
+  

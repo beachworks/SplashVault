@@ -1,0 +1,21 @@
+# random2.wsp -- Random Program, Two spouts at a time
+# 
+# Initially sets the flow to 30, then squirts random spouts, one at a time.
+# User controls duration and period.
+
+name "Random Two"
+set-flow 0  
+set-flow 30
+set *duration 50 
+set *period 1000  
+
+label top 
+    random *i 0 12
+    random *j 0 12 
+    spout-on *i 
+    spout-on *j 
+    pause *duration 
+    spout-off *i 
+    spout-off *j
+    pause 
+    goto top

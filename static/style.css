@@ -1,0 +1,44 @@
+body {
+    background: rgb(71, 127, 249);
+    color: yellow;
+}
+
+.title {font-size: 40px; text-align: center; width: 350px; color: yellow}
+
+.status_line {width: 400px; height: 30px;}
+.psi  {float: left; text-align: center; width: 100px;  color: white; font-size: 16px }
+.flow {float: left; text-align: center; width: 100px;  color: white; font-size: 16px }
+
+.flow_bar {width: 350px; height: 40px;}
+.flow_btn {margin-left: 10px; margin-right: 10px;  font-size: 20px; width: 80px; height: 30px; color: red}
+
+.two_btns {float: left; }
+.speed_bar {width: 350px; height: 40px;}
+.jump_bar {width: 350px; height: 40px;}
+.param_value {margin-left: 20px; margin-top: 7px; float: left;}
+
+.main_btn_bar {margin-left: 25x; margin-top: 10px; width: 350px; height: 50px; color: red; font-size: 30px;}
+.main_btn {margin-left: 10px; margin-top: 2px; width: 190px; height: 50px; color: red; font-size: 30px;}
+.minor_btn {margin-left: 10px; margin-top: 2px; width: 80px; height: 50px; color: red; font-size: 26px;}
+
+
+#program_select {margin-left: 50px; margin-top: 20px; width: 200px; height: 50px; font-size: 30px; color: red;}
+.main_sel {width: 200px; font-size: 20px; color: red; }
+
+.pad_layout {margin-top: 10px; width: 350px; height: 400px;}
+.pad_btn {color: black; font-size: 16px; font-weight: bold; width: 30px; height: 30px; background-color: brown;}
+#btn_a {position: absolute; left:  60px; top: 420px;}
+#btn_b {position: absolute; left: 140px; top: 420px;}
+#btn_c {position: absolute; left: 220px; top: 420px;}
+#btn_d {position: absolute; left: 100px; top: 460px;}
+#btn_e {position: absolute; left: 180px; top: 460px;}
+#btn_f {position: absolute; left:  60px; top: 500px;}
+#btn_g {position: absolute; left: 140px; top: 500px;}
+#btn_h {position: absolute; left: 220px; top: 500px;}
+#btn_i {position: absolute; left: 100px; top: 540px;}
+#btn_j {position: absolute; left: 180px; top: 540px;}
+#btn_k {position: absolute; left:  60px; top: 580px;}
+#btn_l {position: absolute; left: 140px; top: 580px;}
+#btn_m {position: absolute; left: 220px; top: 580px;}
+#btn_n {position: absolute; left: 280px; top: 400px;}
+

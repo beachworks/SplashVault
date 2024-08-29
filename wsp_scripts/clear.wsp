@@ -1,0 +1,21 @@
+# clear.wsp -- Clears all the tubes with max pressure
+#
+# Duration is initially set to 5 secounds per spout,
+# and flow is set to max.  Thereafter the user can
+# control.
+
+name "Clear Spouts"
+set *duration 5000 
+set *period 100
+set-flow 100
+
+label top
+set *ispout 14
+
+label loop 
+  dec *ispout
+  squirt *ispout 
+  pause 
+  if-not-zero *ispout loop
+  
+goto top

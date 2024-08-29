@@ -1,0 +1,43 @@
+# pattern.wsp -- Try making some patterns
+#
+# After initial settings, user controls flow, duration and speed.
+
+set *duration 100 
+set *period 1000
+set-flow 100 
+set-flow 70
+
+label top 
+  squirt major_row_1 
+  pause 
+  squirt major_row_2 
+  pause 
+  squirt major_row_3
+  pause 
+  squirt major_column_1
+  pause
+  squirt major_column_2
+  pause
+  squirt major_column_3
+  pause
+  squirt center 
+  pause
+  squirt diagonal_1 
+  pause
+  squirt diagonal_2
+  pause
+  squirt inside_box
+  change-flow 100
+  pause
+  squirt outside_box
+  pause
+  squirt outside_box
+  pause
+  squirt outside_box
+  pause
+  set-flow 100
+  set-flow 70
+  pause
+  goto top
+
+

@@ -1,0 +1,18 @@
+# slow_and_easy.wsp -- Play slow, not much wetness
+#
+#  User can control flow.  Spout and Duration is
+#  controlled by this program.  Duration is random between
+#  200-3000 ms.
+#
+
+name "Slow and Easy"
+set-flow 0  
+set-flow 20
+set *duration 50  
+
+label top 
+    random *wait 500 3000
+    random *i 0 12 
+    squirt *i 
+    pause *wait
+    goto top

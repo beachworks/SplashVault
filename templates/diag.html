@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href='/static/style.css' />
+        <script type="text/javascript">
+            function do_reset() {
+                window.location = "/?action=reset"
+            }
+            function do_flow(direction) {
+                if (direction > 0) window.location="/?action=flow_up"
+                else window.location="/?action=flow_down"
+            }
+            function do_speed(direction) {
+                if (direction > 0) window.location="/?action=speed_up"
+                else window.location="/?action=speed_down"
+            }
+            function do_jump(direction) {
+                if (direction > 0) window.location="/?action=jump_up"
+                else window.location="/?action=jump_down"
+            }
+            function do_stop() {
+                window.location="/?action=stop"
+            }
+            function do_play() {
+                sel = document.getElementById("program")
+                window.location="/?action=play&program=" + sel.value
+            }
+            function do_pad(num) {
+                window.location="/?action=one_shot&pad=" + num.toString()
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="title">Splash Pad</div>
+        <div class="status_line">
+            <div class="psi">{{psi1}} psi</div>
+            <div class="psi">{{psi2}} psi</div>
+            <div class="flow">{{flow}}% flow</div>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="flow_bar">
+            <button class="flow_btn" id="up_btn" onclick=do_flow(1)>Up</button>
+            <button class="flow_btn" id="dn_btn" onclick=do_flow(-1)>Down</button>
+            <button class="flow_btn" id="reset_btn" onclick=do_reset()>Reset</button>
+        </div>
+        <div class="speed_bar">
+            <div class="two_btns">
+            <button class="flow_btn" id="faster_btn" onclick=do_speed(1)>Faster</button>
+            <button class="flow_btn" id="slower_btn" onclick=do_speed(-1)>Slower</button>
+            </div>
+            <div class="param_value" id="speed_value"> {{speed}} ms</div>
+        </div>
+        <div class="jump_bar">
+            <div class="two_btns">
+            <button class="flow_btn" id="bigger_btn" onclick=do_jump(1)>Bigger</button>
+            <button class="flow_btn" id="smaller_btn" onclick=do_jump(-1)>Smaller</button>
+            </div>
+            <div class="param_value" id="jump_value"> {{jump}} ms</div>
+        </div>
+
+        
+        <button class="main_btn" id="stop_btn" onclick=do_stop()>Stop</button>
+        <button class="main_btn" id="play_btn" onclick=do_play()>Play</button>
+        <div id="program_select">
+            <select class="main_sel" name="program" id="program">
+                <option value="random">Random</option>
+                <option value="spin">Spin</option>
+                <option value="swirl">Swirl</option>
+                <option value="one_shot">One Shot</option>
+            </select>
+        </div>
+
+        <div class="pad_layout">
+            <div class="pad" id="b_a"><button class="pad_btn" id="btn_a" onclick=do_pad(0)>A</button></div>
+            <div class="pad" id="b_b"><button class="pad_btn" id="btn_b" onclick=do_pad(1)>B</button></div>
+            <div class="pad" id="b_c"><button class="pad_btn" id="btn_c" onclick=do_pad(2)>C</button></div>
+            <div class="pad" id="b_d"><button class="pad_btn" id="btn_d" onclick=do_pad(3)>D</button></div>
+            <div class="pad" id="b_e"><button class="pad_btn" id="btn_e" onclick=do_pad(4)>E</button></div>
+            <div class="pad" id="b_f"><button class="pad_btn" id="btn_f" onclick=do_pad(5)>F</button></div>
+            <div class="pad" id="b_g"><button class="pad_btn" id="btn_g" onclick=do_pad(6)>G</button></div>
+            <div class="pad" id="b_h"><button class="pad_btn" id="btn_h" onclick=do_pad(7)>H</button></div>
+            <div class="pad" id="b_i"><button class="pad_btn" id="btn_i" onclick=do_pad(8)>I</button></div>
+            <div class="pad" id="b_j"><button class="pad_btn" id="btn_j" onclick=do_pad(9)>J</button></div>
+            <div class="pad" id="b_k"><button class="pad_btn" id="btn_k" onclick=do_pad(10)>K</button></div>
+            <div class="pad" id="b_l"><button class="pad_btn" id="btn_l" onclick=do_pad(11)>L</button></div>
+            <div class="pad" id="b_m"><button class="pad_btn" id="btn_m" onclick=do_pad(12)>M</button></div>
+            <div class="pad" id="b_n"><button class="pad_btn" id="btn_n" onclick=do_pad(13)>N</button></div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,13 @@
+# gate.wsp -- Turns on the waterspouts by the gate
+#
+# Flow is initially set to 50. Thereafter flow can be 
+# controlled by the user.  Stop the program to shut off
+# the spouts.
+
+name "Gate On"
+spout-on gate
+set-flow 0
+change-flow 50
+hold
+
+
