@@ -110,24 +110,24 @@ the command "spout-on A" is equivalent to "spout-on 0".  Also, if, say, a varibl
 In addition, group names for the spouts can be used with spout-on, spout-off, and squirt.  These names and corresponding indexes
 are as follows:
 
-        14  gate            -- The water-spouts by the gate
-        15  center          -- The center spout
-        16  corners         -- The spouts on the outside corners
-        17  inside_corners  -- The spouts on the corners that form the inside box
-        18  major_row_1     -- The major row closes to the gate
-        19  major_row_2     -- The major row that includes the center
-        20  major_row_3     -- The major row furthest from the gate
-        21  minor_row_1     -- The minor row of the inside box, closes to the gate
-        22  minor_row_2     -- The minor row of the inside box, farthest from the gate
-        23  major_column_1  -- The major column on the west side
-        24  major_column_2  -- The major column in the center
-        25  major_column_3  -- The major column on the east side
-        26  minor_column_1  -- the minor column of the inside box, on the west side
-        27  minor_column_2  -- the minor column of the inside box, on the east side
-        28  diagonal_1      -- the NW to SE diagonal
-        29  diagonal_2      -- the NE to SW diagonal
-        30  outside_box     -- the 8 spouts that forms the outside box
-        31  inside_box      -- the 4 spouts that forms the inside box
+    14  gate            -- The water-spouts by the gate
+    15  center          -- The center spout
+    16  corners         -- The spouts on the outside corners
+    17  inside_corners  -- The spouts on the corners that form the inside box
+    18  major_row_1     -- The major row closes to the gate
+    19  major_row_2     -- The major row that includes the center
+    20  major_row_3     -- The major row furthest from the gate
+    21  minor_row_1     -- The minor row of the inside box, closes to the gate
+    22  minor_row_2     -- The minor row of the inside box, farthest from the gate
+    23  major_column_1  -- The major column on the west side
+    24  major_column_2  -- The major column in the center
+    25  major_column_3  -- The major column on the east side
+    26  minor_column_1  -- the minor column of the inside box, on the west side
+    27  minor_column_2  -- the minor column of the inside box, on the east side
+    28  diagonal_1      -- the NW to SE diagonal
+    29  diagonal_2      -- the NE to SW diagonal
+    30  outside_box     -- the 8 spouts that forms the outside box
+    31  inside_box      -- the 4 spouts that forms the inside box
 
 Spout groups with ending numbers can be referred to as follows:
      
